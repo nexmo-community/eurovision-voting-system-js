@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eurovision Results Pane</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div id="leaderboard">
+      <h1>Leaderboard</h1>
+      <div class="list">
+        <div class="country" v-for="country in leaderboard">
+          <span class="name">{{country.name}}</span>
+          <span class="score">{{country.score}}</span>
+        </div>
+      </div>
+    </div>
+    <div id="admin">
+      <h1>Get Results</h1>
+      <form>
+        <select v-model="toReveal">
+          <option disabled value="">Select country</option>
+          <option v-for="country in leftToReveal" :value="country.iso">{{country.name}}</option>
+        </select>
+        <input type="submit" @click.prevent="getScores" value="Get Scores">
+      </form>
+      <div id="results">
+        <h2>{{resultsCountry}}</h2>
+        <div class="result" v-for="result in results">
+          <span class="name">{{result.country}}</span>
+          <span class="points">+{{result.points}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="client.js"></script>
+</body>
+</html>

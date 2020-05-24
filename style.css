@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #050636; font-family: 'Montserrat', sans-serif; }
+#app { display: grid; grid-template-columns: auto 350px; grid-gap: 1em; padding: 1em; }
+#leaderboard { background: white; color: #050636; padding: 1em 1em 0; }
+.list { columns: 2; column-gap: 1em; margin-top: 1em; }
+.country, .result { padding: 0.5em; background: #f0f0f0; margin-bottom: 1em; width: 100%; display: flex; flex-direction: row; justify-content: space-between; font-size: 1.25em; align-items: center; }
+.score { font-size: 1.25em; font-weight: bold; }
+#admin { background: #2a2b87; color: white; padding: 1em; }
+form { display: grid; grid-template-columns: 225px auto; grid-gap: 1em; }
+form { margin: 1em 0; }
+.result { background: #4c4eb3; margin-top: 0.5em; }
