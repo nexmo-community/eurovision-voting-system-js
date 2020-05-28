@@ -25,7 +25,11 @@ const app = new Vue({
       return this.countries.filter(c => !c.results)
     },
     baseURL() {
-      return 'http://localhost:9000'
+      if(location.hostname == 'localhost' || location.hostname == "127.0.0.1") {
+        return "http://localhost:9000"
+      }  else {
+        return "https://eurovision-test.netlify.app/.netlify/functions"
+      }
     },
     toRevealCountry() {
       const country = this.countries.find(c => c.iso == this.toReveal)
