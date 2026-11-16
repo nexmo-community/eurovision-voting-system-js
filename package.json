@@ -13,7 +13,7 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "encoding": "^0.1.12",
-    "mongodb": "^3.5.7",
+    "mongodb": "^7.0.0",
     "netlify-lambda": "^1.6.3",
     "nexmo": "^2.7.0-beta-1"
   }
